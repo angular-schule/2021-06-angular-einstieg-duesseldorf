@@ -20,6 +20,7 @@ Die gesamte Installation wird rund 30 Minuten dauern.
 2. **Google Chrome:** [https://www.google.com/chrome/](https://www.google.com/chrome/)
 4. **Visual Studio Code:** [https://code.visualstudio.com](https://code.visualstudio.com)
    + [Angular-Schule: Extension Pack](https://marketplace.visualstudio.com/items?itemName=angular-schule.angular-schule-extension-pack)  (Visual Studio Code Extension)
+   + [ESLint für VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  (`dbaeumer.vscode-eslint`)
 5. optional: **Git** (und ggf. ein grafischer Client wie SourceTree oder GitExtensions)
 
 
