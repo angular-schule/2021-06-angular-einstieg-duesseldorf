@@ -1,27 +1,87 @@
-# BookRating
+<img src="http://assets.angular.schule/header-intensivworkshop.png">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+#### **mit Ferdinand Malcher**
 
-## Development server
+<hr>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Herzlich Willkommen zum Workshop – schön, dass du dabei bist!**  
+In diesem Repository findest du während des Workshops den Quelltext unserer Beispielanwendung.
 
-## Code scaffolding
+# ✅ Vorbereitung
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> ⚠️ **Bitte führe die Vorbereitung rechtzeitig VOR dem Workshop aus, damit wir ohne Zeitverlust loslegen können.**
 
-## Build
+Die gesamte Installation wird rund 30 Minuten dauern.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Benötigte Software
 
-## Running unit tests
+1. **Node.js 12** oder höher: [https://nodejs.org](https://nodejs.org)
+   + Mac-Benutzer bitte Homebrew verwenden! ([siehe Anleitung](https://presentations.angular.schule/HOMEBREW_NODE))
+2. **Google Chrome:** [https://www.google.com/chrome/](https://www.google.com/chrome/)
+4. **Visual Studio Code:** [https://code.visualstudio.com](https://code.visualstudio.com)
+   + [Angular-Schule: Extension Pack](https://marketplace.visualstudio.com/items?itemName=angular-schule.angular-schule-extension-pack)  (Visual Studio Code Extension)
+5. optional: **Git** (und ggf. ein grafischer Client wie SourceTree oder GitExtensions)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Pakete installieren
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+Die Angular CLI ist das offizielle Build-Tool für Angular. Mit folgendem Befehl kannst Du die CLI auf dem System installieren:
 
-## Further help
+```
+npm install -g @angular/cli
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+⚠️ Überprüfe bitte anschließend die Versionen, damit wir beim Workshop alle auf dem gleichen Stand sind.
+
+```
+node -v
+> Erwartet: v12.x oder höher
+
+npm -v
+> Erwartet: 6.x oder höher
+
+ng version
+> Erwartet: 12.0.0 oder höher
+```
+
+
+## Projekt installieren
+
+Wir haben bereits ein Projekt vorbereitet, mit dem wir im Workshop arbeiten werden.
+Bitte klone dieses Repo und installiere das Angular-Projekt auf deinem Rechner.
+Führe dazu in deinem Arbeitsverzeichnis die folgenden Befehle aus:
+
+```bash
+git clone https://github.com/angular-schule/2021-06-angular-einstieg-duesseldorf.git
+cd 2021-06-angular-einstieg-duesseldorf
+npm install
+```
+
+Die Installation kann bei langsamer Internetverbindung sehr lange dauern.
+Warte das `npm install` mit Geduld ab!
+
+Anschließend kannst du das Projekt starten:
+
+```bash
+ng serve
+```
+
+> Auf http://localhost:4200 sollte nun eine Website mit dem Text *"Hallo Welt!"* erscheinen!
+Wenn bei allen Teilnehmer:innen das Grundgerüst steht, können wir ohne Zeitverlust loslegen.
+
+
+Sollte es zu einem Fehler kommen, melde dich einfach per Mail bei uns unter [team@angular.schule](mailto:team@angular.schule).  
+Wir werden schnell eine Lösung finden.
+
+
+
+### Wir freuen uns schon! 🙂
+
+<hr>
+
+<img src="http://assets.angular.schule/logo-angular-schule.png" height="60">
+
+### &copy; https://angular.schule | Stand: 25.05.2021
+
+
+
