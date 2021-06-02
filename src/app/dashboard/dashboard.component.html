@@ -1,4 +1,11 @@
-<br-book *ngFor="let b of books" [book]="b"></br-book>
+<br-cart-display
+    [books]="cart"
+    (removeFromCart)="removeFromCart($event)"></br-cart-display>
+
+<br-book
+    (addToCart)="doAddToCart($event)"
+    *ngFor="let b of books"
+    [book]="b"></br-book>
 
 <div>
     <strong>Anzahl Bücher:</strong> {{ books.length }}

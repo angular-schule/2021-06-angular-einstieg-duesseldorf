@@ -7,8 +7,9 @@
     <li class="list-group-item" *ngIf="!books.length">
       <strong>Keine Bücher im Warenkorb.</strong>
     </li>
-    <li class="list-group-item" *ngFor="let b of books">
+    <li class="list-group-item" *ngFor="let b of books; index as i">
       {{ b.title }}
+      <button class="btn btn-danger" (click)="remove(i)">X</button>
       <span class="float-right">{{ b.price | currency:'EUR' }}</span>
     </li>
   </ul>

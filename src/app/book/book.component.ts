@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Book } from '../shared/book';
 
 @Component({
@@ -9,6 +9,7 @@ import { Book } from '../shared/book';
 export class BookComponent implements OnInit {
 
   @Input() book?: Book; // Property öffnen, damit es von außen beschrieben werden darf
+  @Output() addToCart = new EventEmitter<Book>();
 
   constructor() {
     
@@ -18,7 +19,12 @@ export class BookComponent implements OnInit {
   }
 
   doAddToCart() {
-    console.log('HALLO');
+    if (this.book) {
+      this.addToCart.emit(this.book);
+    }
+    
+    // Alternative:
+    // this.book && this.addToCart.emit(this.book);
   }
 
 }

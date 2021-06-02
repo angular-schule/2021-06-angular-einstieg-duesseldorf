@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { Book } from '../shared/book';
 
@@ -8,10 +8,15 @@ import { Book } from '../shared/book';
 })
 export class CartDisplayComponent {
 
+  @Output() removeFromCart = new EventEmitter<number>();
   @Input() books: Book[] = [];
 
   get totalValue(): number {
     return this.books.reduce((acc, book) => acc + book.price, 0);
+  }
+
+  remove(i: number) {
+    this.removeFromCart.emit(i);
   }
 
 }

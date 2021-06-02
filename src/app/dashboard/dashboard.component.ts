@@ -35,9 +35,20 @@ export class DashboardComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  cart: Book[] = [];
+
+  constructor() {}
 
   ngOnInit(): void {
+  }
+
+  doAddToCart(book: Book) {
+    this.cart.push(book);
+    console.log(this.cart);
+  }
+
+  removeFromCart(index: number) {
+    this.cart = this.cart.filter((_, i) => i !== index);
   }
 
 }
