@@ -36,6 +36,7 @@ export class DashboardComponent implements OnInit {
   ];
 
   cart: Book[] = [];
+  d = new Date();
 
   constructor() {}
 
