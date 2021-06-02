@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../shared/book';
+import { BookStoreService } from '../shared/book-store.service';
 
 @Component({
   selector: 'br-dashboard',
@@ -8,38 +9,20 @@ import { Book } from '../shared/book';
 })
 export class DashboardComponent implements OnInit {
 
-  books: Book[] = [
-    {
-      isbn: '12345',
-      title: 'Angular',
-      description: 'Grundlagen und Best Practices',
-      rating: 5,
-      price: 36.9,
-      firstThumbnailUrl: 'https://api.angular.schule/avatar/5',
-    },
-    {
-      isbn: '23456',
-      title: 'React',
-      description: 'Das Framework von Facebook',
-      rating: 3,
-      price: 32.9,
-      firstThumbnailUrl: 'https://api.angular.schule/avatar/3',
-    },
-    {
-      isbn: '34567',
-      title: 'Vue.js',
-      description: 'Grün und vunderbar',
-      rating: 5,
-      price: 29.9,
-      firstThumbnailUrl: 'https://api.angular.schule/avatar/4',
-    },
-  ];
+  books: Book[] = [];
 
   cart: Book[] = [];
   d = new Date();
 
-  constructor() {}
+  // "private" vor dem Argument sorgt dafür, dass das Property "bs" automatisch
+  // deklariert und initialisiert wird
+  constructor(private bs: BookStoreService) {
+    this.bs.getAll().subscribe(books => {
+      this.books = books;
+    });
+  }
 
+  // im ngOnInit sind Input-propertys bereits initialisiert – im Konstruktor noch nicht!
   ngOnInit(): void {
   }
 
