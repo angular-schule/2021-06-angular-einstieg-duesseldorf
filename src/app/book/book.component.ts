@@ -10,9 +10,15 @@ export class BookComponent implements OnInit {
 
   @Input() book?: Book; // Property öffnen, damit es von außen beschrieben werden darf
 
-  constructor() { }
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
+  }
+
+  doAddToCart() {
+    console.log('HALLO');
   }
 
 }
