@@ -7,13 +7,15 @@ import { CartDisplayComponent } from './cart-display/cart-display.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookComponent } from './book/book.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CartDisplayComponent,
     DashboardComponent,
-    BookComponent
+    BookComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,

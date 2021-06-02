@@ -11,6 +11,10 @@
       <p>{{ book.description }}</p>
   
       <button (click)="doAddToCart()" class="btn btn-success">In den Warenkorb 🛒</button>
+      
+      <!--<a href="/books/details/{{ book.isbn }}">Details</a>-->
+      <a [routerLink]="['/books', 'details', book.isbn]">Details</a>
+    
     </div>
   </div>
   
