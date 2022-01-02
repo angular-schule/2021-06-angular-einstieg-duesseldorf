@@ -1,26 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CartDisplayComponent } from './cart-display/cart-display.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BookComponent } from './book/book.component';
-import { HttpClientModule } from '@angular/common/http';
-import { BookDetailsComponent } from './book-details/book-details.component';
+import { BooksModule } from './books/books.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartDisplayComponent,
-    DashboardComponent,
-    BookComponent,
-    BookDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BooksModule
   ],
   providers: [],
   bootstrap: [AppComponent]

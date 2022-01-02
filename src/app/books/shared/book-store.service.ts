@@ -7,11 +7,15 @@ import { Book } from './book';
   providedIn: 'root'
 })
 export class BookStoreService {
+  private apiUrl = 'https://api.angular.schule';
+
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Book[]> {
-    return this.http.get<Book[]>('https://api.angular.schule/books');
+    return this.http.get<Book[]>(this.apiUrl + '/books');
   }
 
-  getSingle(isbn: string) {}
+  getSingle(isbn: string) {
+    return this.http.get<Book>(this.apiUrl + '/books/' + isbn);
+  }
 }

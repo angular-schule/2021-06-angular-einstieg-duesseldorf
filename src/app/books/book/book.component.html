@@ -9,12 +9,11 @@
       </div>
       <p><strong>Preis:</strong> {{ book.price | currency:'EUR' }}</p>
       <p>{{ book.description }}</p>
-  
+
       <button (click)="doAddToCart()" class="btn btn-success">In den Warenkorb 🛒</button>
-      
-      <!--<a href="/books/details/{{ book.isbn }}">Details</a>-->
-      <a [routerLink]="['/books', 'details', book.isbn]">Details</a>
-    
+
+      <!-- TODO -->
+      <a class="ml-2">Details</a>
+
     </div>
   </div>
-  
