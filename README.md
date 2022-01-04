@@ -7,15 +7,27 @@
 **Herzlich Willkommen zum Workshop – schön, dass du dabei bist!**  
 In diesem Repository findest du während des Workshops den Quelltext unserer Beispielanwendung.
 
-# ✅ Vorbereitung
+# ⚡️ Quick Start
 
-> ⚠️ **Bitte führe die Vorbereitung rechtzeitig VOR dem Workshop aus, damit wir ohne Zeitverlust loslegen können.**
+Wenn du schon alle benötigte Software installiert hast, musst Du nur noch das Projekt installieren und starten.
+Klone dazu dieses GitHub-Repository. Danach im Projektverzeichnis:
 
-Die gesamte Installation wird rund 30 Minuten dauern.
+```bash
+npm install
+npm start
+```
+
+
+**Achtung: Bitte installiere das Projekt auch dann neu, wenn Du im letzten Workshop schon dabei warst!**
+
+
+
+# ✅ Installation (ausführlich)
+
 
 ## Benötigte Software
 
-1. **Node.js 12** oder höher: [https://nodejs.org](https://nodejs.org)
+1. **Node.js 14 oder 16**: [https://nodejs.org](https://nodejs.org)
    + Mac-Benutzer bitte Homebrew verwenden! ([siehe Anleitung](https://presentations.angular.schule/HOMEBREW_NODE))
 2. **Google Chrome:** [https://www.google.com/chrome/](https://www.google.com/chrome/)
 4. **Visual Studio Code:** [https://code.visualstudio.com](https://code.visualstudio.com)
@@ -64,10 +76,10 @@ Warte das `npm install` mit Geduld ab!
 Anschließend kannst du das Projekt starten:
 
 ```bash
-ng serve
+npm start
 ```
 
-> Auf http://localhost:4200 sollte nun eine Website mit dem Text *"Hallo Welt!"* erscheinen!
+> Auf http://localhost:4200 sollte nun der "Book Rating Shop" erscheinen.
 Wenn bei allen Teilnehmer:innen das Grundgerüst steht, können wir ohne Zeitverlust loslegen.
 
 
@@ -82,7 +94,7 @@ Wir werden schnell eine Lösung finden.
 
 <img src="http://assets.angular.schule/logo-angular-schule.png" height="60">
 
-### &copy; https://angular.schule | Stand: 25.05.2021
+### &copy; https://angular.schule | Stand: 04.01.2022
 
 
 
