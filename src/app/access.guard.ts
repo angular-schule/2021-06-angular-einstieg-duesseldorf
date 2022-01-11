@@ -21,7 +21,7 @@ export class AccessGuard implements CanActivate, CanActivateChild, CanDeactivate
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    if (window.confirm('Access child?')) {
+      if (window.confirm('Access child?')) {
       return true;
     } else {
       return this.router.parseUrl('/'); // routerLink="foo"
@@ -40,6 +40,8 @@ export class AccessGuard implements CanActivate, CanActivateChild, CanDeactivate
   canLoad(
     route: Route,
     segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return window.confirm('Load feature?');
+
+      const confirmText = route.data?.confirmText || 'Load feature?';
+      return window.confirm(confirmText);
   }
 }

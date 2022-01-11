@@ -9,7 +9,13 @@ const routes: Routes = [
   {
     path: 'books',
     loadChildren: () => import('./books/books.module').then(m => m.BooksModule),
-    canLoad: [AccessGuard]
+    canLoad: [AccessGuard],
+    data: {
+      // allowedGroups: ['admin'],
+      // authenticated: true,
+      // redirect: '/login',
+      confirmText: 'Do you want to load the BOOKS feature?'
+    }
   }
 ];
 
