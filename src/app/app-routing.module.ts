@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: 'books',
     loadChildren: () => import('./books/books.module').then(m => m.BooksModule),
-    canLoad: [AccessGuard],
+    // canLoad: [AccessGuard],
     data: {
       // allowedGroups: ['admin'],
       // authenticated: true,
@@ -21,7 +21,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
+    preloadingStrategy: PreloadAllModules,
+    enableTracing: true,
+    // scrollPositionRestoration: 'enabled'
   })],
   exports: [RouterModule]
 })
