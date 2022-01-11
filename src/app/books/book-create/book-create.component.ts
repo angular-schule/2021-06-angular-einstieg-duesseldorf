@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookCreateComponent implements OnInit {
 
-  constructor() { }
+  hasChanges = false;
+
+  constructor() {
+    // DEMO
+    setTimeout(() => {
+      this.hasChanges = true;
+    }, 5000);
+  }
 
   ngOnInit(): void {
+  }
+
+  reset() {
+    this.hasChanges = false;
   }
 
 }
