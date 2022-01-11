@@ -6,6 +6,7 @@ import { CartDisplayComponent } from './cart-display/cart-display.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookComponent } from './book/book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { BookCreateComponent } from './book-create/book-create.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     DashboardComponent,
     BookComponent,
     BookDetailsComponent,
+    BookCreateComponent,
   ],
   imports: [
     CommonModule,
