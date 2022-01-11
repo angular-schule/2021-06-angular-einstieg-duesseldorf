@@ -12,8 +12,7 @@
 
       <button (click)="doAddToCart()" class="btn btn-success">In den Warenkorb 🛒</button>
 
-      <!-- TODO -->
-      <a class="ml-2">Details</a>
+      <a class="ml-2" [routerLink]="['..', 'details', book.isbn]">Details</a>
 
     </div>
   </div>
