@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { BookComponent } from './book/book.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BookCreateComponent } from './book-create/book-create.component';
+import { EntryComponent } from './entry/entry.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { BookCreateComponent } from './book-create/book-create.component';
     BookComponent,
     BookDetailsComponent,
     BookCreateComponent,
+    EntryComponent,
   ],
   imports: [
     CommonModule,
