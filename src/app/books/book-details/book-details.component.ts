@@ -16,9 +16,15 @@ export class BookDetailsComponent {
   constructor(private route: ActivatedRoute, private bs: BookStoreService) {
     this.book$ = EMPTY; // TODO
 
-    // Synchroner Weg
-    const isbn = this.route.snapshot.paramMap.get('isbn');
-    console.log('ISBN', isbn);
+    // Synchroner Weg (PULL)
+    // const isbn = this.route.snapshot.paramMap.get('isbn'); // /books/details/:isbn
+    // console.log('ISBN', isbn);
+
+    // Asynchroner Weg (PUSH)
+    this.route.paramMap.subscribe(params => {
+      const isbn = params.get('isbn')!; // Non-Null Assertion
+      this.book$ = this.bs.getSingle(isbn);
+    });
   }
 
 }
