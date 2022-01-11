@@ -5,10 +5,10 @@ import { BookDetailsComponent } from './book-details/book-details.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: 'books', redirectTo: 'books/list', pathMatch: 'full' },
-  { path: 'books/list', component: DashboardComponent },
-  { path: 'books/details', redirectTo: 'books/details/9783864907791' },
-  { path: 'books/details/:isbn', component: BookDetailsComponent },
+  { path: '', redirectTo: 'list', pathMatch: 'full' },
+  { path: 'list', component: DashboardComponent },
+  { path: 'details', redirectTo: 'details/9783864907791' },
+  { path: 'details/:isbn', component: BookDetailsComponent },
 ];
 
 @NgModule({

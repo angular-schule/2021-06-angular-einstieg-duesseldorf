@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BooksModule } from './books/books.module';
+// import { BooksModule } from './books/books.module';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BooksModule
+    // BooksModule
   ],
   providers: [],
   bootstrap: [AppComponent]
