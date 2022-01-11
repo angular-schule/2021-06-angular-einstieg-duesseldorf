@@ -4,6 +4,7 @@ import { AccessGuard } from '../access.guard';
 import { BookCreateComponent } from './book-create/book-create.component';
 
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { BookResolverService } from './book-resolver.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { EntryComponent } from './entry/entry.component';
 
@@ -23,7 +24,13 @@ const routes: Routes = [
         canDeactivate: [AccessGuard]
       },
       { path: 'details', redirectTo: 'details/9783864907791' },
-      { path: 'details/:isbn', component: BookDetailsComponent }
+      {
+        path: 'details/:isbn',
+        component: BookDetailsComponent,
+        resolve: {
+          book: BookResolverService
+        }
+      }
     ]
   }
 ];
